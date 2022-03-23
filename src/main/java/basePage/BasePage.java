@@ -7,10 +7,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+
 public class BasePage {
+	
+	
 
 	// Write here what browser you want to test with
-	private static String browser = /* write browser here ---> */ "edge";
+	private static String browser = /* write browser here ---> */ "chrome";
 
 	// Declare the web driver
 	public static WebDriver driver;
@@ -71,8 +74,9 @@ public class BasePage {
 	}
 
 	// close the web driver and clear cookies
-	public static void closeDriver() {
 
+	public static void closeDriver()  {
+		
 		try {
 			if (driver != null) {
 				driver.manage().deleteAllCookies();
@@ -80,16 +84,11 @@ public class BasePage {
 				driver = null;
 			}
 		} catch (Exception e) {
-			System.out.println("Method Failed: screenshotOnFailure, Exception: " + e.getMessage());
+			
+			System.out.println("Method Failed: Exception: " + e.getMessage());
+			
 		}
 	}
-
-	/*
-	 * public void tearDown() { try { if(driver != null) {
-	 * driver.manage().deleteAllCookies(); driver.quit(); driver = null; } }
-	 * catch(Exception e) {
-	 * System.out.println("Method Failed: screenshotOnFailure, Exception: " +
-	 * e.getMessage()); } }
-	 */
-
+	
+	
 }
