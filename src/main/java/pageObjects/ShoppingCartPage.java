@@ -16,7 +16,7 @@ public class ShoppingCartPage extends CommonMethods {
 	}
 
 	// Quits the driver
-	public static void quit() throws IOException  {
+	public static void quit()  {
 		closeDriver();
 
 	}

@@ -4,12 +4,21 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="testMethodDevelopment.DevTests.OrderNowDonutsTests">
-				<!--<methods>
+				<methods>
 					<include name="pickDonutsHungry" />
-					<exclude name="pickDonutsEconomy" />
+					<include name="pickDonutsEconomy" />
 					<include name="pickDonutsLuxury" />
-				</methods> -->
+				</methods>
 			</class>
+
+			<class name="testMethodDevelopment.DevTests.LoginTests">
+				<methods>
+					<include name="invalidPassword" />
+					<include name="invalidUsername" />
+					<include name="validUsernamePassword" />
+				</methods>
+			</class>
+
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
