@@ -107,12 +107,7 @@ public class OrderNowPage extends CommonMethods {
 	}
 
 	
-	//Quits the driver
-	public static void quit() throws IOException {
-
-		closeDriver();
-
-	}
+	
 
 	public static void pickDonuts(int i) {
 		
