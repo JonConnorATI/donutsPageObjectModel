@@ -45,7 +45,8 @@ public class LoginTests extends BasePage {
 
 		finally {
 
-			LoginPage.quit();
+			closeDriver();
+			
 		}
 
 	}
@@ -80,7 +81,7 @@ public class LoginTests extends BasePage {
 
 		finally {
 
-			LoginPage.quit();
+			closeDriver();
 		}
 
 	}
@@ -116,7 +117,7 @@ public class LoginTests extends BasePage {
 
 		finally {
 
-			MyAccountPage.quit();
+			closeDriver();
 		}
 
 	}

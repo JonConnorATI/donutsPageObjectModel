@@ -15,11 +15,7 @@ public class ShoppingCartPage extends CommonMethods {
 
 	}
 
-	// Quits the driver
-	public static void quit()  {
-		closeDriver();
-
-	}
+	
 
 	// checks the items in the Hungry Cart
 	public static void CheckHungryCartText(String string, String donuts, String string2, String string3, String string4,

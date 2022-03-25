@@ -33,11 +33,6 @@ public class LoginPage extends CommonMethods {
 
 	}
 
-	// Quits the driver
-	public static void quit() {
-		closeDriver();
-
-	}
 
 	//Press the login button for a valid combination
 	public static MyAccountPage LoginButton() {

@@ -52,7 +52,8 @@ public class OrderNowDonutsTests extends BasePage {
 
 		finally {
 
-			ShoppingCartPage.quit();
+			closeDriver();
+			
 		}
 
 	}
@@ -97,7 +98,7 @@ public class OrderNowDonutsTests extends BasePage {
 
 		finally {
 
-			ShoppingCartPage.quit();
+			closeDriver();
 		}
 
 	}
@@ -147,7 +148,7 @@ public class OrderNowDonutsTests extends BasePage {
 
 		finally {
 
-			ShoppingCartPage.quit();
+			closeDriver();
 		}
 
 	}

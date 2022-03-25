@@ -11,10 +11,6 @@ public class MyAccountPage extends CommonMethods {
 
 	}
 
-	// Quits the driver
-	public static void quit() {
-		closeDriver();
-
-	}
+	
 
 }
