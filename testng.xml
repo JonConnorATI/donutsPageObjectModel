@@ -19,6 +19,19 @@
 				</methods>
 			</class>
 
+			<class name="testMethodDevelopment.DevTests.AccountTests">
+				<methods>
+					<include name="accountSection" />
+					<include name="ordersSection" />
+					<include name="downloadsSection" />
+					<include name="couponsSection" />
+					<include name="addressSection" />
+					<include name="paymentsSection" />
+					<include name="accountDetailsSection" />
+					<include name="logOut" />
+				</methods>
+			</class>
+
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

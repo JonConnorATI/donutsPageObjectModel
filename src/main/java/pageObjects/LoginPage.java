@@ -54,8 +54,14 @@ public class LoginPage extends CommonMethods {
 	public static void CheckUrl() {
 		String URL = "https://offbeatdonuts.com/my-account/";
 		String Actual = driver.getCurrentUrl();
+		System.out.println("Expected is: " + URL + " - Actual is: " + Actual);
 		assertEquals(Actual, URL);
 
+	}
+
+	public static void CheckLogInButtonPresent(String string) {
+		checkForPresenceOfText(By.xpath("//button[@name='login']"),string);
+		
 	}
 
 }

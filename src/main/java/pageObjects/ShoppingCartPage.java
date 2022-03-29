@@ -1,7 +1,5 @@
 package pageObjects;
 
-import java.io.IOException;
-
 import org.openqa.selenium.By;
 
 import commonMethods.CommonMethods;
