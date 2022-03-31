@@ -104,6 +104,44 @@ public class MyAccountPage extends CommonMethods {
 		
 		return new LoginPage();
 	}
+
+	public static void enterCurrentPassword(String string) {
+		clearText(By.xpath("//input[@name='password_current']"));
+		enterText(By.xpath("//input[@name='password_current']"),string);
+		
+	}
+
+	public static void enterNewPassword(String string) {
+		enterText(By.xpath("//input[@name='password_1']"),string);
+		
+	}
+
+	public static void confirmNewPassword(String string) {
+		enterText(By.xpath("//input[@name='password_2']"),string);
+		
+	}
+
+	public static void saveChanges() {
+		Click(By.xpath("//button[@name='save_account_details']"));
+		
+	}
+
+	public static void checkConfirmationMsg(String string) {
+		WaitForElementToBePresent(By.cssSelector(".woocommerce-message"));
+		checkForPresenceOfText(By.cssSelector(".woocommerce-message"),string);
+		
+	}
+
+	public static void changeDisplayName(String string) {
+		clearText(By.xpath("//input[@name='account_display_name']"));
+		enterText(By.xpath("//input[@name='account_display_name']"),string);
+		
+	}
+
+	public static void checkDisplayName(String string) {
+		checkForPresenceOfText(By.cssSelector(".woocommerce-MyAccount-content>p:first-of-type"),string);
+		
+	}
 	
 	
 

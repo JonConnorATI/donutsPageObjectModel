@@ -3,13 +3,6 @@
 <suite name="Suite">
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="testMethodDevelopment.DevTests.OrderNowDonutsTests">
-				<methods>
-					<include name="pickDonutsHungry" />
-					<include name="pickDonutsEconomy" />
-					<include name="pickDonutsLuxury" />
-				</methods>
-			</class>
 
 			<class name="testMethodDevelopment.DevTests.LoginTests">
 				<methods>
@@ -18,7 +11,6 @@
 					<include name="validUsernamePassword" />
 				</methods>
 			</class>
-
 			<class name="testMethodDevelopment.DevTests.AccountTests">
 				<methods>
 					<include name="accountSection" />
@@ -31,7 +23,20 @@
 					<include name="logOut" />
 				</methods>
 			</class>
-
+			<class name="testMethodDevelopment.DevTests.ChangePasswordTests">
+				<methods>
+					<include name="changePassword" />
+					<include name="changeUsername" />
+					<include name="revertPasswordUsername" />
+				</methods>
+			</class>
+			<class name="testMethodDevelopment.DevTests.OrderNowDonutsTests">
+				<methods>
+					<include name="pickDonutsHungry" />
+					<include name="pickDonutsEconomy" />
+					<include name="pickDonutsLuxury" />
+				</methods>
+			</class>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
