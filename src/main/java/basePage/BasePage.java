@@ -31,7 +31,7 @@ public class BasePage {
 			case "firefox":
 				if (null == driver) {
 					System.setProperty("webdriver.gecko.driver",
-							"C:\\Users\\JonCo\\git\\donutsPageObjectModel\\Drivers\\geckodriver.exe");
+							"Drivers\\geckodriver.exe");
 					driver = new FirefoxDriver();
 				}
 				break;
@@ -40,7 +40,7 @@ public class BasePage {
 			case "chrome":
 				if (null == driver) {
 					System.setProperty("webdriver.chrome.driver",
-							"C:\\Users\\JonCo\\git\\donutsPageObjectModel\\Drivers\\chromedriver.exe");
+							"Drivers\\chromedriver.exe");
 					driver = new ChromeDriver();
 				}
 				break;
@@ -50,7 +50,7 @@ public class BasePage {
 				if (null == driver) {
 
 					System.setProperty("webdriver.edge.driver",
-							"C:\\Users\\JonCo\\git\\donutsPageObjectModel\\Drivers\\msedgedriver.exe");
+							"Drivers\\msedgedriver.exe");
 					driver = new EdgeDriver();
 				}
 				break;
