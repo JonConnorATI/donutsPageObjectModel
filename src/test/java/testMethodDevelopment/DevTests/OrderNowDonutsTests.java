@@ -121,7 +121,7 @@ public class OrderNowDonutsTests extends BasePage {
 	public void pickDonutsLuxury() throws Exception {
 		/*
 		 * Pick an offbeat dozen, with 12 different varieties, add candles, add a
-		 * message, add to cart then check cart has everything.
+		 * message, add to cart then check cart has everything. Took out photo as issues with path of the file
 		 */
 		String donuts = "Birthday Double Dozen";
 		String thisTest = "pickDonutsLuxury";
