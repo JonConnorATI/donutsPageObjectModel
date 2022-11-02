@@ -3,9 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="testMethodDevelopment.DevTests.OrderNowDonutsTests"/>
-      <class name="testMethodDevelopment.DevTests.AccountTests"/>
-      <class name="testMethodDevelopment.DevTests.ChangePasswordTests"/>
+     
       <class name="testMethodDevelopment.DevTests.LoginTests"/>
     </classes>
   </test> <!-- Test -->
