@@ -182,8 +182,12 @@ public class OrderNowPage extends CommonMethods {
 
 	//adds a jpg from the Resources folder
 	public static void addPhoto() {
+		
+		String path = "C:\\Users\\JonCo\\git\\donutsPageObjectModel\\Resources\\cucumber.jpg";
+		
+		
 		Click(By.xpath("(//h4[text() ='Add 30 Personalised Sugar Discs:'])[1]"));
-		uploadFile(By.xpath("(//input[@type='file'])[1]"),"C:\\Users\\JonCo\\git\\donutsPageObjectModel\\Resources\\cucumber.jpg");
+		uploadFile(By.xpath("(//input[@type='file'])[1]"),path);
 		
 	}
 	

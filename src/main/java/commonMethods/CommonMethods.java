@@ -3,6 +3,7 @@ package commonMethods;
 
 
 
+import java.io.File;
 import java.time.Duration;
 import org.junit.Assert;
 
@@ -188,14 +189,17 @@ public class CommonMethods  extends BasePage{
 		}
 		
 		// Method to upload a file
-		public static void uploadFile(By locator, String filePath) {
+		public static void uploadFile(By locator, String path) {
+			
+			File file = new File(path);
+			
 
 			WebElement element = driver.findElement(locator);
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			// Setting value for "style" attribute to make textbox visible
 			js.executeScript("arguments[0].style.display='block';", element);
-			driver.findElement(locator).sendKeys(filePath);
+			driver.findElement(locator).sendKeys(file.getAbsolutePath());
 		}
 		
-
+		
 }

@@ -141,14 +141,14 @@ public class OrderNowDonutsTests extends BasePage {
 			OrderNowPage.addGreetingCard("Happy Birthday", "All the best on your special day");
 			OrderNowPage.addBow("Pink");
 			OrderNowPage.addMessage("Just For You");
-			OrderNowPage.addPhoto();
+			//OrderNowPage.addPhoto();
 			OrderNowPage.selectAddToCart();
 			OrderNowPage.checkPopUpItemsArePresent("Your box was added to cart", "VIEW CART", "Start another box");
 			OrderNowPage.selectViewCart();
 
-			ShoppingCartPage.CheckLuxuryCartText("my cart (6 items)", donuts, "Remove", "Candles", "Remove", "Card",
+			ShoppingCartPage.CheckLuxuryCartText("my cart (5 items)", donuts, "Remove", "Candles", "Remove", "Card",
 					"Happy Birthday", "All the best on your special day", "Remove", "Bow", "\"Pink\"", "Remove",
-					"Piped name", "\"Just For You\"", "Remove", "Personalised discs", "cucumber.jpg", "Remove");
+					"Piped name", "\"Just For You\"", "Remove");
 
 		}
 

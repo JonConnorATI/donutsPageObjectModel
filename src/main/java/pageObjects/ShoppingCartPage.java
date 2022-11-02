@@ -32,8 +32,7 @@ public class ShoppingCartPage extends CommonMethods {
 
 	public static void CheckLuxuryCartText(String string, String donuts, String string2, String string3, String string4,
 			String string5, String string6, String string7, String string8, String string9, String string10,
-			String string11, String string12, String string13, String string14, String string15, String string16,
-			String string17) {
+			String string11, String string12, String string13, String string14) {
 		
 		checkForPresenceOfText(By.cssSelector(".entry-title"), string);
 		checkForPresenceOfText(By.cssSelector("td.product-name > a:nth-child(1)"), donuts);
@@ -50,9 +49,9 @@ public class ShoppingCartPage extends CommonMethods {
 		checkForPresenceOfText(By.xpath("(//td[@class='product-name']/a)[5]"), string12);
 		checkForPresenceOfText(By.xpath("(//dd[@class='variation-Selection']/p)[4]"), string13);
 		checkForPresenceOfText(By.xpath("(//span[@class='product-remove'])[5]"), string14);
-		checkForPresenceOfText(By.xpath("(//td[@class='product-name']/a)[6]"), string15);
-		checkForPresenceOfSomeText(By.xpath("(//dd[@class='variation-Selection']/p)[5]"), string16);
-		checkForPresenceOfText(By.xpath("(//span[@class='product-remove'])[6]"), string17);
+		//checkForPresenceOfText(By.xpath("(//td[@class='product-name']/a)[6]"), string15);
+		//checkForPresenceOfSomeText(By.xpath("(//dd[@class='variation-Selection']/p)[5]"), string16);
+		//checkForPresenceOfText(By.xpath("(//span[@class='product-remove'])[6]"), string17);
 		
 		
 		
