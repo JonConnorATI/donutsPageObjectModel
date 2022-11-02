@@ -4,218 +4,218 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>testMethodDevelopment</groupId>
-	<artifactId>offBeatDonutsPageObjectModel</artifactId>
+	<artifactId>donutsPageObjectModel</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<name>DevTests</name>
 	<!-- FIXME change it to the project's website -->
-	 <url>http://www.example.com</url>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-  </properties>
-  <dependencies>
-    <dependency>
-      <groupId>io.rest-assured</groupId>
-      <artifactId>rest-assured</artifactId>
-      <version>5.2.0</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-java</artifactId>
-      <version>4.1.0</version>
-    </dependency>
-   <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-devtools-v104</artifactId>
-      <version>4.4.0</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-chrome-driver</artifactId>
-      <version>4.1.2</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm-deps -->
-    <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-jvm-deps</artifactId>
-      <version>1.0.6</version>
-      <scope>provided</scope>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/io.cucumber/gherkin -->
-    <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>gherkin</artifactId>
-      <version>22.0.0</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/junit/junit -->
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.13.2</version>
-      <scope>test</scope>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
-    <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-all</artifactId>
-      <version>1.10.19</version>
-      <scope>test</scope>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
-    <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-core</artifactId>
-      <version>7.1.0</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
-    <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-java</artifactId>
-      <version>7.1.0</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
-    <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-junit</artifactId>
-      <version>7.1.0</version>
-      <scope>test</scope>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting -->
-    <dependency>
-      <groupId>net.masterthought</groupId>
-      <artifactId>cucumber-reporting</artifactId>
-      <version>5.6.1</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
-    <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-testng</artifactId>
-      <version>7.1.0</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm -->
-    <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-jvm</artifactId>
-      <version>7.1.0</version>
-      <type>pom</type>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-html -->
-    <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-html</artifactId>
-      <version>0.2.7</version>
-    </dependency>
-    <!--https://mvnrepository.com/artifact/org.hamcrest/hamcrest-all -->
-    <dependency>
-      <groupId>org.hamcrest</groupId>
-      <artifactId>hamcrest-all</artifactId>
-      <version>1.3</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
-    <dependency>
-      <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-picocontainer</artifactId>
-      <version>7.1.0</version>
-      <scope>test</scope>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-    <dependency>
-      <groupId>com.aventstack</groupId>
-      <artifactId>extentreports</artifactId>
-      <version>5.0.9</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
-    <dependency>
-      <groupId>org.freemarker</groupId>
-      <artifactId>freemarker</artifactId>
-      <version>2.3.31</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/com.vimalselvam/cucumber-extentsreport -->
-    <dependency>
-      <groupId>com.vimalselvam</groupId>
-      <artifactId>cucumber-extentsreport</artifactId>
-      <version>3.1.1</version>
-    </dependency>
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-simple</artifactId>
-      <version>1.7.30</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>1.18.24</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.github.bonigarcia</groupId>
-      <artifactId>webdrivermanager</artifactId>
-      <version>5.3.0</version>
-    </dependency>
-  </dependencies>
-  <build>
-    <pluginManagement>
-      <!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
-      <plugins>
-        <plugin>
-          <artifactId>maven-clean-plugin</artifactId>
-          <version>3.1.0</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-site-plugin</artifactId>
-          <version>3.7.1</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>3.0.0</version>
-        </plugin>
-        <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
-        <plugin>
-          <artifactId>maven-resources-plugin</artifactId>
-          <version>3.0.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.10.1</version>
-        </plugin>
-        
-        <plugin>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>3.0.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-install-plugin</artifactId>
-          <version>2.5.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-deploy-plugin</artifactId>
-          <version>2.8.2</version>
-        </plugin>
-      
-       
-        <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M7</version>
-        <configuration>
-          <suiteXmlFiles>
-            <suiteXmlFile>testng.xml</suiteXmlFile>
-          </suiteXmlFiles>
-        </configuration>
-      </plugin>
-    </plugins>
-    </pluginManagement>
-  </build>
-  <reporting>
-    <plugins>
-      <plugin>
-        <artifactId>maven-project-info-reports-plugin</artifactId>
-      </plugin>
-    </plugins>
-  </reporting>
+	<url>http://www.example.com</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>5.2.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-devtools-v104</artifactId>
+			<version>4.4.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-chrome-driver</artifactId>
+			<version>4.1.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm-deps -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-jvm-deps</artifactId>
+			<version>1.0.6</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.cucumber/gherkin -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>gherkin</artifactId>
+			<version>22.0.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.10.19</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-core</artifactId>
+			<version>7.1.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>7.1.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>7.1.0</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting -->
+		<dependency>
+			<groupId>net.masterthought</groupId>
+			<artifactId>cucumber-reporting</artifactId>
+			<version>5.6.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-testng</artifactId>
+			<version>7.1.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-jvm</artifactId>
+			<version>7.1.0</version>
+			<type>pom</type>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-html -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-html</artifactId>
+			<version>0.2.7</version>
+		</dependency>
+		<!--https://mvnrepository.com/artifact/org.hamcrest/hamcrest-all -->
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-all</artifactId>
+			<version>1.3</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-picocontainer</artifactId>
+			<version>7.1.0</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>5.0.9</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>2.3.31</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.vimalselvam/cucumber-extentsreport -->
+		<dependency>
+			<groupId>com.vimalselvam</groupId>
+			<artifactId>cucumber-extentsreport</artifactId>
+			<version>3.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>1.7.30</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.24</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>5.3.0</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<pluginManagement>
+			<!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+			<plugins>
+				<plugin>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>3.1.0</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>3.7.1</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-project-info-reports-plugin</artifactId>
+					<version>3.0.0</version>
+				</plugin>
+				<!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+				<plugin>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>3.0.2</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.10.1</version>
+				</plugin>
+
+				<plugin>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>3.0.2</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-install-plugin</artifactId>
+					<version>2.5.2</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>2.8.2</version>
+				</plugin>
+
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>3.0.0-M7</version>
+					<configuration>
+						<suiteXmlFiles>
+							<suiteXmlFile>testng.xml</suiteXmlFile>
+						</suiteXmlFiles>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+	<reporting>
+		<plugins>
+			<plugin>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</reporting>
 </project>

@@ -4,7 +4,8 @@ package commonMethods;
 
 
 import java.time.Duration;
-import org.junit.Assert;
+import static org.junit.Assert.*;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +14,11 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import basePage.BasePage;
+
+
+
 
 
 //import cucumber.api.java.After;
@@ -110,7 +115,7 @@ public class CommonMethods  extends BasePage{
 	public static void checkURL(String url) {
 		
 		String currentURL = driver.getCurrentUrl();
-		Assert.assertEquals(currentURL, url);
+		assertEquals(currentURL, url);
 		
 	}
 	
@@ -120,7 +125,7 @@ public class CommonMethods  extends BasePage{
 	public static void checkElementAttributeText (By locator, String ExptdText) {
 		String ActText = driver.findElement(locator).getAttribute("value");
 		System.out.println("actual is: " + ActText + " and Expctd is: " + ExptdText);
-		Assert.assertEquals(ActText, ExptdText);
+		assertEquals(ActText, ExptdText);
 		
 	}
 	
@@ -137,7 +142,7 @@ public class CommonMethods  extends BasePage{
 		try {
 			wait.until(expectation);
 		} catch (Throwable error) {
-			Assert.assertFalse("Timeout waiting for Page Load Request to complete.", true);
+			assertFalse("Timeout waiting for Page Load Request to complete.", true);
 		}
 	}
 	
@@ -162,7 +167,7 @@ public class CommonMethods  extends BasePage{
 			WebElement element = driver.findElement((locator));
 			String Actual = element.getText();
 			System.out.println("Expected is: " + string + " - Actual is: " + Actual);
-			Assert.assertEquals(string, Actual);
+			assertEquals(string, Actual);
 			
 		}
 		
@@ -177,7 +182,7 @@ public class CommonMethods  extends BasePage{
 			// expected
 			boolean isFound = Actual.contains(string);
 			System.out.println("Expected is: " + string + " is a substring of " + Actual + " - Actual is: " + isFound);
-			Assert.assertEquals(isFound, true);
+			assertEquals(isFound, true);
 		}
 		
 		// Method to upload a file

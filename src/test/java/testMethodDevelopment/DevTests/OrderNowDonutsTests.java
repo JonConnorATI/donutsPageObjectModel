@@ -1,11 +1,5 @@
 package testMethodDevelopment.DevTests;
 
-import java.io.File;
-import java.io.IOException;
-
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.testng.annotations.Test;
 
 import basePage.BasePage;
@@ -16,13 +10,13 @@ import pageObjects.ShoppingCartPage;
 public class OrderNowDonutsTests extends BasePage {
 
 	@Test
-	public void pickDonutsEconomy() throws InterruptedException, IOException {
+	public void pickDonutsEconomy() throws Exception {
 		/*
 		 * Pick Classic Glazed Dozen, add to cart, then check cart has everything //
 		 * ordered included.
 		 */
 		String donuts = "Classic Glazed Dozen";
-		String test = "pickDonutsEconomy";
+		String thisTest = "pickDonutsEconomy";
 
 		try {
 
@@ -42,30 +36,40 @@ public class OrderNowDonutsTests extends BasePage {
 
 		}
 
-		catch (Exception e) {
-			TakesScreenshot ts = (TakesScreenshot) driver;
-			File file = ts.getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(file, new File("./ScreenShot_Fails/" + test + ".png"));
-			System.out.println("There has been an error, see screenshot. The error is: " + e);
+		catch (AssertionError e1) {
+			// Do whatever you wish to do here
+			System.out.println("Take Screen Shot");
+			takeSnapShot(driver, "test-output/Assertions/" + thisTest + "/test.png");
+			// Now throw the exception back to the system
+			System.out.println("Throw the error back to the system");
+			throw (e1);
+		}
 
+		catch (Exception e) {
+			// Do whatever you wish to do here
+			System.out.println("Take Screen Shot");
+			takeSnapShot(driver, "test-output/Exceptions/" + thisTest + "/test.png");
+			// Now throw the exception back to the system
+			System.out.println("Throw the error back to the system");
+			throw (e);
 		}
 
 		finally {
 
 			closeDriver();
-			
 		}
 
 	}
+	
 
 	@Test
-	public void pickDonutsHungry() throws InterruptedException, IOException {
+	public void pickDonutsHungry() throws Exception {
 		/*
 		 * Pick an offbeat dozen, with 12 different varieties, add candles, add a
 		 * message, add to cart then check cart has everything.
 		 */
 		String donuts = "Offbeat Dozen";
-		String test = "pickDonutsHungry";
+		String thisTest = "pickDonutsHungry";
 
 		try {
 
@@ -88,12 +92,22 @@ public class OrderNowDonutsTests extends BasePage {
 					"Piped name", "\"Just For You\"", "Remove");
 		}
 
-		catch (Exception e) {
-			TakesScreenshot ts = (TakesScreenshot) driver;
-			File file = ts.getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(file, new File("./ScreenShot_Fails/" + test + ".png"));
-			System.out.println("There has been an error, see screenshot. The error is: " + e);
+		catch (AssertionError e1) {
+			// Do whatever you wish to do here
+			System.out.println("Take Screen Shot");
+			takeSnapShot(driver, "test-output/Assertions/" + thisTest + "/test.png");
+			// Now throw the exception back to the system
+			System.out.println("Throw the error back to the system");
+			throw (e1);
+		}
 
+		catch (Exception e) {
+			// Do whatever you wish to do here
+			System.out.println("Take Screen Shot");
+			takeSnapShot(driver, "test-output/Exceptions/" + thisTest + "/test.png");
+			// Now throw the exception back to the system
+			System.out.println("Throw the error back to the system");
+			throw (e);
 		}
 
 		finally {
@@ -104,13 +118,13 @@ public class OrderNowDonutsTests extends BasePage {
 	}
 
 	@Test
-	public void pickDonutsLuxury() throws InterruptedException, IOException {
+	public void pickDonutsLuxury() throws Exception {
 		/*
 		 * Pick an offbeat dozen, with 12 different varieties, add candles, add a
 		 * message, add to cart then check cart has everything.
 		 */
 		String donuts = "Birthday Double Dozen";
-		String test = "pickDonutsLuxury";
+		String thisTest = "pickDonutsLuxury";
 
 		try {
 
@@ -138,12 +152,22 @@ public class OrderNowDonutsTests extends BasePage {
 
 		}
 
-		catch (Exception e) {
-			TakesScreenshot ts = (TakesScreenshot) driver;
-			File file = ts.getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(file, new File("./ScreenShot_Fails/" + test + ".png"));
-			System.out.println("There has been an error, see screenshot. The error is: " + e);
+		catch (AssertionError e1) {
+			// Do whatever you wish to do here
+			System.out.println("Take Screen Shot");
+			takeSnapShot(driver, "test-output/Assertions/" + thisTest + "/test.png");
+			// Now throw the exception back to the system
+			System.out.println("Throw the error back to the system");
+			throw (e1);
+		}
 
+		catch (Exception e) {
+			// Do whatever you wish to do here
+			System.out.println("Take Screen Shot");
+			takeSnapShot(driver, "test-output/Exceptions/" + thisTest + "/test.png");
+			// Now throw the exception back to the system
+			System.out.println("Throw the error back to the system");
+			throw (e);
 		}
 
 		finally {
