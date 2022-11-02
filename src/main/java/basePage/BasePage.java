@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -48,15 +49,28 @@ public class BasePage {
 			case "chrome":
 				if (null == driver) {
 
+					ChromeOptions ops = new ChromeOptions();
+					ops.addArguments("--disable-notifications"); 
+					ops.addArguments("--headless");
+					ops.addArguments("--no-sandbox");
+					ops.addArguments("--disable-dev-shm-usage");
+					ops.addArguments("--window-size=1920,1080");
+					ops.addArguments("--disable-extensions");
+					ops.addArguments("--proxy-server='direct://'");
+					ops.addArguments("--proxy-bypass-list=*");
+					ops.addArguments("--disable-gpu");
+					ops.addArguments("--ignore-certificate-errors");
+					ops.addArguments("--start-maximized");
+					WebDriverManager.chromedriver().setup(); 
+					driver = new ChromeDriver(ops);
+					
 					/*
 					 * System.setProperty("webdriver.chrome.driver",
 					 * "C:\\Users\\JonCo\\git\\donutsPageObjectModel\\Drivers\\chromedriver.exe");
 					 * driver = new ChromeDriver();
 					 */
 					
-					WebDriverManager.chromedriver().setup();
-
-					driver = new ChromeDriver();
+					
 				}
 				break;
 

@@ -1,42 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-	<test thread-count="5" name="Test">
-		<classes>
-
-			<class name="testMethodDevelopment.DevTests.LoginTests">
-				<methods>
-					<include name="invalidPassword" />
-					<include name="invalidUsername" />
-					<include name="validUsernamePassword" />
-				</methods>
-			</class>
-			<class name="testMethodDevelopment.DevTests.AccountTests">
-				<methods>
-					<include name="accountSection" />
-					<include name="ordersSection" />
-					<include name="downloadsSection" />
-					<include name="couponsSection" />
-					<include name="addressSection" />
-					<include name="paymentsSection" />
-					<include name="accountDetailsSection" />
-					<include name="logOut" />
-				</methods>
-			</class>
-			<class name="testMethodDevelopment.DevTests.ChangePasswordTests">
-				<methods>
-					<include name="changePassword" />
-					<include name="changeUsername" />
-					<include name="revertPasswordUsername" />
-				</methods>
-			</class>
-			<class name="testMethodDevelopment.DevTests.OrderNowDonutsTests">
-				<methods>
-					<include name="pickDonutsHungry" />
-					<include name="pickDonutsEconomy" />
-					<include name="pickDonutsLuxury" />
-				</methods>
-			</class>
-		</classes>
-	</test> <!-- Test -->
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="testMethodDevelopment.DevTests.OrderNowDonutsTests"/>
+      <class name="testMethodDevelopment.DevTests.AccountTests"/>
+      <class name="testMethodDevelopment.DevTests.ChangePasswordTests"/>
+      <class name="testMethodDevelopment.DevTests.LoginTests"/>
+    </classes>
+  </test> <!-- Test -->
 </suite> <!-- Suite -->
