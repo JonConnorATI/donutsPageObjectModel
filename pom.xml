@@ -66,6 +66,13 @@
       <scope>test</scope>
     </dependency>
     <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
+   <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>6.1.1</version>
+        <scope>compile</scope>
+    </dependency>
+   
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-core</artifactId>
