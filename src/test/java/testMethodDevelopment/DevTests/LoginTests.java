@@ -1,11 +1,5 @@
 package testMethodDevelopment.DevTests;
 
-import java.io.File;
-import java.io.IOException;
-
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.testng.annotations.Test;
 
 import basePage.BasePage;
@@ -16,9 +10,9 @@ import pageObjects.MyAccountPage;
 public class LoginTests extends BasePage {
 
 	@Test
-	public void invalidPassword() throws IOException {
+	public void invalidPassword() throws Exception {
 		
-		String test = "invalidPassword";
+		String thisTest = "invalidPassword";
 		
 
 		try {
@@ -35,26 +29,35 @@ public class LoginTests extends BasePage {
 
 		}
 
-		catch (Exception e) {
-			TakesScreenshot ts = (TakesScreenshot) driver;
-			File file = ts.getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(file, new File("./ScreenShot_Fails/" + test + ".png"));
-			System.out.println("There has been an error, see screenshot. The error is: " + e);
+		catch (AssertionError e1) {
+			// Do whatever you wish to do here
+			System.out.println("Take Screen Shot");
+			takeSnapShot(driver, "test-output/Assertions/" + thisTest + "/test.png");
+			// Now throw the exception back to the system
+			System.out.println("Throw the error back to the system");
+			throw (e1);
+		}
 
+		catch (Exception e) {
+			// Do whatever you wish to do here
+			System.out.println("Take Screen Shot");
+			takeSnapShot(driver, "test-output/Exceptions/" + thisTest + "/test.png");
+			// Now throw the exception back to the system
+			System.out.println("Throw the error back to the system");
+			throw (e);
 		}
 
 		finally {
 
 			closeDriver();
-			
 		}
 
 	}
 	
 	@Test
-	public void invalidUsername() throws IOException {
+	public void invalidUsername() throws Exception {
 		
-		String test = "invalidUsername";
+		String thisTest = "invalidUsername";
 		
 
 		try {
@@ -71,12 +74,22 @@ public class LoginTests extends BasePage {
 
 		}
 
-		catch (Exception e) {
-			TakesScreenshot ts = (TakesScreenshot) driver;
-			File file = ts.getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(file, new File("./ScreenShot_Fails/" + test + ".png"));
-			System.out.println("There has been an error, see screenshot. The error is: " + e);
+		catch (AssertionError e1) {
+			// Do whatever you wish to do here
+			System.out.println("Take Screen Shot");
+			takeSnapShot(driver, "test-output/Assertions/" + thisTest + "/test.png");
+			// Now throw the exception back to the system
+			System.out.println("Throw the error back to the system");
+			throw (e1);
+		}
 
+		catch (Exception e) {
+			// Do whatever you wish to do here
+			System.out.println("Take Screen Shot");
+			takeSnapShot(driver, "test-output/Exceptions/" + thisTest + "/test.png");
+			// Now throw the exception back to the system
+			System.out.println("Throw the error back to the system");
+			throw (e);
 		}
 
 		finally {
@@ -87,9 +100,9 @@ public class LoginTests extends BasePage {
 	}
 	
 	@Test
-	public void validUsernamePassword() throws IOException {
+	public void validUsernamePassword() throws Exception {
 		
-		String test = "validUsernamePassword";
+		String thisTest = "validUsernamePassword";
 		
 
 		try {
@@ -107,12 +120,22 @@ public class LoginTests extends BasePage {
 
 		}
 
-		catch (Exception e) {
-			TakesScreenshot ts = (TakesScreenshot) driver;
-			File file = ts.getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(file, new File("./ScreenShot_Fails/" + test + ".png"));
-			System.out.println("There has been an error, see screenshot. The error is: " + e);
+		catch (AssertionError e1) {
+			// Do whatever you wish to do here
+			System.out.println("Take Screen Shot");
+			takeSnapShot(driver, "test-output/Assertions/" + thisTest + "/test.png");
+			// Now throw the exception back to the system
+			System.out.println("Throw the error back to the system");
+			throw (e1);
+		}
 
+		catch (Exception e) {
+			// Do whatever you wish to do here
+			System.out.println("Take Screen Shot");
+			takeSnapShot(driver, "test-output/Exceptions/" + thisTest + "/test.png");
+			// Now throw the exception back to the system
+			System.out.println("Throw the error back to the system");
+			throw (e);
 		}
 
 		finally {

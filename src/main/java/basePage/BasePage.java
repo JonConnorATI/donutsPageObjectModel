@@ -1,12 +1,19 @@
 package basePage;
 
+import java.io.File;
 import java.time.Duration;
 
+import static org.junit.Assert.*;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -126,5 +133,20 @@ public class BasePage {
 		}
 	}
 	
+	public static void assertionTest() {
+		boolean isFound = true;
+		assertEquals(isFound, true);
+	}
+	
+	public static void takeSnapShot(WebDriver webdriver,String fileWithPath) throws Exception{
+		//Convert web driver object to TakeScreenshot
+		TakesScreenshot scrShot =((TakesScreenshot)webdriver);
+		//Call getScreenshotAs method to create image file
+		File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+		//Move image file to new destination
+		File DestFile=new File(fileWithPath);
+		//Copy file at destination
+		FileUtils.copyFile(SrcFile, DestFile);
+	}
 	
 }

@@ -1,10 +1,12 @@
 package pageObjects;
 
-import static org.junit.Assert.assertEquals;
+import org.testng.*;
 
 import org.openqa.selenium.By;
 
 import commonMethods.CommonMethods;
+
+
 
 public class LoginPage extends CommonMethods {
 	
@@ -29,7 +31,7 @@ public class LoginPage extends CommonMethods {
 	
 	//check the error message is received
 	public static void checkLoginErrorMessage() {
-		assertEquals(driver.findElement(By.cssSelector(".woocommerce-error>li>a")).getText(), ("Lost Your Password?"));
+		Assert.assertEquals(driver.findElement(By.cssSelector(".woocommerce-error>li>a")).getText(), ("Lost Your Password?"));
 
 	}
 
@@ -55,12 +57,19 @@ public class LoginPage extends CommonMethods {
 		String URL = "https://offbeatdonuts.com/my-account/";
 		String Actual = driver.getCurrentUrl();
 		System.out.println("Expected is: " + URL + " - Actual is: " + Actual);
-		assertEquals(Actual, URL);
+		Assert.assertEquals(Actual, URL);
 
 	}
 
 	public static void CheckLogInButtonPresent(String string) {
 		checkForPresenceOfText(By.xpath("//button[@name='login']"),string);
+		
+	}
+	
+	public static void checkBrowserOpens() {
+		
+		navigateToHomePage();
+		waitForPageLoaded(driver);
 		
 	}
 
