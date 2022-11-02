@@ -3,7 +3,7 @@ package pageObjects;
 
 
 
-import static org.junit.Assert.*;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 
 import commonMethods.CommonMethods;
@@ -11,7 +11,7 @@ import commonMethods.CommonMethods;
 public class MyAccountPage extends CommonMethods {
 
 	public static void checkTitle(String title) {
-		assertEquals(driver.getTitle(), (title));
+		Assert.assertEquals(driver.getTitle(), (title));
 
 	}
 

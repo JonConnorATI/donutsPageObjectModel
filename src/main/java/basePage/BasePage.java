@@ -3,7 +3,7 @@ package basePage;
 import java.io.File;
 import java.time.Duration;
 
-import static org.junit.Assert.*;
+import org.junit.Assert;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -135,7 +135,7 @@ public class BasePage {
 	
 	public static void assertionTest() {
 		boolean isFound = true;
-		assertEquals(isFound, true);
+		Assert.assertEquals(isFound, true);
 	}
 	
 	public static void takeSnapShot(WebDriver webdriver,String fileWithPath) throws Exception{

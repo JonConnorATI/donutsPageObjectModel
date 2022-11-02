@@ -4,7 +4,7 @@ package commonMethods;
 
 
 import java.time.Duration;
-import static org.junit.Assert.*;
+import org.junit.Assert;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -16,6 +16,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import basePage.BasePage;
+
+
 
 
 
@@ -115,7 +117,7 @@ public class CommonMethods  extends BasePage{
 	public static void checkURL(String url) {
 		
 		String currentURL = driver.getCurrentUrl();
-		assertEquals(currentURL, url);
+		Assert.assertEquals(currentURL, url);
 		
 	}
 	
@@ -125,7 +127,7 @@ public class CommonMethods  extends BasePage{
 	public static void checkElementAttributeText (By locator, String ExptdText) {
 		String ActText = driver.findElement(locator).getAttribute("value");
 		System.out.println("actual is: " + ActText + " and Expctd is: " + ExptdText);
-		assertEquals(ActText, ExptdText);
+		Assert.assertEquals(ActText, ExptdText);
 		
 	}
 	
@@ -142,7 +144,7 @@ public class CommonMethods  extends BasePage{
 		try {
 			wait.until(expectation);
 		} catch (Throwable error) {
-			assertFalse("Timeout waiting for Page Load Request to complete.", true);
+			Assert.assertFalse("Timeout waiting for Page Load Request to complete.", true);
 		}
 	}
 	
@@ -167,7 +169,7 @@ public class CommonMethods  extends BasePage{
 			WebElement element = driver.findElement((locator));
 			String Actual = element.getText();
 			System.out.println("Expected is: " + string + " - Actual is: " + Actual);
-			assertEquals(string, Actual);
+			Assert.assertEquals(string, Actual);
 			
 		}
 		
@@ -182,7 +184,7 @@ public class CommonMethods  extends BasePage{
 			// expected
 			boolean isFound = Actual.contains(string);
 			System.out.println("Expected is: " + string + " is a substring of " + Actual + " - Actual is: " + isFound);
-			assertEquals(isFound, true);
+			Assert.assertEquals(isFound, true);
 		}
 		
 		// Method to upload a file
