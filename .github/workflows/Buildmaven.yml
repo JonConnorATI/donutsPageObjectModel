@@ -17,7 +17,7 @@ jobs:
       - name: Build with Maven
         run:  mvn clean install package --file pom.xml
       - name: Publish Test Report
-        uses: starburstdata/action-testng-report@v2
+        uses: starburstdata/action-testng-report@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
