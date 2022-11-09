@@ -1,7 +1,7 @@
 name: Build
 on:
   schedule:
-    - cron: '0 0/12 * * *'
+    - cron: '15 0/1 * * *'
 jobs:
   test_schedule:
     runs-on: ubuntu-latest
@@ -17,9 +17,9 @@ jobs:
       - name: Build with Maven
         run:  mvn clean install package --file pom.xml
       - name: Publish Test Report
-        uses: starburstdata/action-testng-report@v1
+        uses: starburstdata/action-testng-report@v2
         with:
-          github_token: ${{ secrets.REPORTS }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
 
  
