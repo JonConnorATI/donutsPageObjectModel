@@ -16,10 +16,18 @@ public class HomePage extends CommonMethods {
 
 	//Accept cookies
 	public static void acceptCookies() {
+		
 		WaitForElementToBePresent(By.id("cookiescript_accept"));
-		// Thread.sleep(2000);
-		Click(By.id("cookiescript_accept"));
-
+		
+		if (isElementPresent(By.xpath("//div[@data-testid='POPUP']")))
+			Click(By.xpath("//button[text()='NO THANKS']"));
+		if (isElementPresent(By.id("cookiescript_accept")))
+			Click(By.id("cookiescript_accept"));	
+		
+		/*
+		 * WaitForElementToBePresent(By.id("cookiescript_accept")); //
+		 * Thread.sleep(2000); Click(By.id("cookiescript_accept"));
+		 */
 	}
 	
 	//Select the OrderNow button
