@@ -31,7 +31,8 @@ public class LoginPage extends CommonMethods {
 	
 	//check the error message is received
 	public static void checkLoginErrorMessage() {
-		Assert.assertEquals(driver.findElement(By.cssSelector(".woocommerce-error>li>a")).getText(), ("Lost Your Password"));
+		WaitForElementToBePresent(By.xpath("//ul[@role='alert']//a"));
+		Assert.assertEquals(driver.findElement(By.xpath("//ul[@role='alert']//a")).getText(), ("Lost Your Password?"));
 
 	}
 
