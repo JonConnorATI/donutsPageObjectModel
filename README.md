@@ -100,7 +100,7 @@ So once the runner is set up to kick off a run:
 
 * In Eclipse, right click the testng.xml file then Run as TestNG suite
 
-![alt text](Resources/RunTest.png)
+![alt text](Resources/RunTest.PNG)
 
 * Also in Eclipse, when you annotate a testing script with @Test it imports TestNG features, so that you can run all the tests in the file, or just one test in the file
 
