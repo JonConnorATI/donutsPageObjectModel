@@ -62,8 +62,7 @@ The POM.xls file included in the repository has all the other plug ins and depen
 		<ul>
 			<li>Go to the pom.xml file, right click it and select Maven>Update Project>tick Force update of snapshots>OK.</li><br>
 			<li>When that has finished right click the pom.xml file again and select Run As>Maven Clean then when that's finished Run As>Maven Install.</li><br>
-		</ul		
-</ul> 
+		</ul> 
 
 ## Do I need to download a WebDriver? 
 
