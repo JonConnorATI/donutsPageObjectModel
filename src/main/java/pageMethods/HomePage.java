@@ -1,4 +1,4 @@
-package pageObjects;
+package pageMethods;
 
 import org.openqa.selenium.By;
 
@@ -38,13 +38,6 @@ public class HomePage extends CommonMethods {
 
 	}
 
-	//Select the Login button
-	public static LoginPage selectLoginLink() {
-
-		Click(By.linkText("Login"));
-
-		return new LoginPage();
-
-	}
+	
 
 }
