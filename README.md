@@ -65,7 +65,7 @@ The POM.xls file included in the repository has all the other plug ins and depen
 		</ul> 
 
 
-## Do I need to download a WebDriver? 
+## Do I need to download a WebDriver? ###
 No, this framework uses the plug in [WebDriverManager](https://github.com/bonigarcia/webdrivermanager)
 
 WebDriverManager is an open-source Java library that carries out the management (i.e., download, setup, and maintenance) of the drivers required by Selenium WebDriver (e.g., chromedriver, geckodriver, msedgedriver, etc.) in a fully automated manner. 
