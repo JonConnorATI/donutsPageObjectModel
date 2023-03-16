@@ -1,11 +1,11 @@
-package testMethodDevelopment.DevTests;
+package tests;
 
 import org.testng.annotations.Test;
 
 import basePage.BasePage;
-import pageObjects.HomePage;
-import pageObjects.OrderNowPage;
-import pageObjects.ShoppingCartPage;
+import pageMethods.HomePage;
+import pageMethods.OrderNowPage;
+import pageMethods.ShoppingCartPage;
 
 public class OrderNowDonutsTests extends BasePage {
 

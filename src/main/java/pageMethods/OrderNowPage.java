@@ -1,4 +1,4 @@
-package pageObjects;
+package pageMethods;
 
 import java.time.Duration;
 
@@ -105,92 +105,84 @@ public class OrderNowPage extends CommonMethods {
 		return new ShoppingCartPage();
 	}
 
-	
-	
-
 	public static void pickDonuts(int i) {
-		
+
 		WebElement Element = driver.findElement(By.xpath("//p[contains(text(),'All')]"));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView();", Element);
-		
-			int count = 0;
-			int index = 1;
-			
-			Click(By.linkText("Clear Selection"));
-			
-			while (count < i) {
-				Click(By.xpath("(//*[@id='donuts']//*[@class='btn select'])[" + index + "]"));
-				count = count + 1;
-				index = index + 1;
-				
-			
-				
+
+		int count = 0;
+		int index = 1;
+
+		Click(By.linkText("Clear Selection"));
+
+		while (count < i) {
+			Click(By.xpath("(//*[@id='donuts']//*[@class='btn select'])[" + index + "]"));
+			count = count + 1;
+			index = index + 1;
+
 		}
-		
+
 	}
 
-	//add candles
+	// add candles
 	public static void addCandles() {
 		WebElement Element = driver.findElement(By.cssSelector("div[data-section='three']"));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView();", Element);
-		
+
 		WebElement candleCheckBox = driver.findElement(By.xpath("(//h4[text() ='Add Candles'])[1]"));
-		new WebDriverWait(driver, Duration.ofSeconds(60)).until(ExpectedConditions.elementToBeClickable(candleCheckBox));
+		new WebDriverWait(driver, Duration.ofSeconds(60))
+				.until(ExpectedConditions.elementToBeClickable(candleCheckBox));
 		candleCheckBox.click();
-		
+
 	}
 
-	//add a message
+	// add a message
 	public static void addMessage(String string) {
 		Click(By.xpath("(//h4[text() ='Add Message To A Donut:'])[1]"));
 		enterText(By.cssSelector("div[class='selected'] input[placeholder='3 words maximum']"), string);
-		
+
 	}
 
-	//auto pick donuts
+	// auto pick donuts
 	public static void autoPickDonuts() {
 		WebElement Element = driver.findElement(By.xpath("//p[contains(text(),'All')]"));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView();", Element);
-		
+
 		Click(By.linkText("Clear Selection"));
-		
+
 		Click(By.cssSelector("div[class='box_editor ui-droppable active'] a[class='box_autofill']"));
-		
-		
+
 	}
 
-	//Add a card, specify the type, add a greeting
+	// Add a card, specify the type, add a greeting
 	public static void addGreetingCard(String string, String string2) {
-		//select add card
+		// select add card
 		Click(By.xpath("(//h4[text() ='Add A Card:'])[1]"));
-		//select type of card
+		// select type of card
 		Click(By.xpath("(//label[contains(text(),'" + string + "')])[1]"));
-		//add greeting
+		// add greeting
 		enterText(By.xpath("(//div[@class='customise']//textarea)[1]"), string2);
-		
+
 	}
 
-	//adds a bow of the selected colour
+	// adds a bow of the selected colour
 	public static void addBow(String string) {
 		Click(By.xpath("(//h4[text() ='Add A Bow:'])[1]"));
 		Click(By.xpath("(//label[contains(text(),'" + string + "')])[1]"));
-		
+
 	}
 
-	//adds a jpg from the Resources folder
+	// adds a jpg from the Resources folder
 	public static void addPhoto() {
-		
+
 		String path = "C:\\Users\\JonCo\\git\\donutsPageObjectModel\\Resources\\cucumber.jpg";
-		
-		
+
 		Click(By.xpath("(//h4[text() ='Add 30 Personalised Sugar Discs:'])[1]"));
-		uploadFile(By.xpath("(//input[@type='file'])[1]"),path);
-		
+		uploadFile(By.xpath("(//input[@type='file'])[1]"), path);
+
 	}
-	
-	
 
 }
