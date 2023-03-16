@@ -64,14 +64,13 @@ The POM.xls file included in the repository has all the other plug ins and depen
 			<li>When that has finished right click the pom.xml file again and select Run As>Maven Clean then when that's finished Run As>Maven Install.</li><br>
 		</ul> 
 
-## Do I need to download a WebDriver? 
 
+## Do I need to download a WebDriver? 
 No, this framework uses the plug in [WebDriverManager](https://github.com/bonigarcia/webdrivermanager)
 
 WebDriverManager is an open-source Java library that carries out the management (i.e., download, setup, and maintenance) of the drivers required by Selenium WebDriver (e.g., chromedriver, geckodriver, msedgedriver, etc.) in a fully automated manner. 
 
 ## Project Folder Structure
-
 I have structured the framework like this:
 
 * `src/main/java`: This is the root directory for our source code. It contains the Base Methods (Starting the Driver, opening the browser), Common Methods (Click, wait for an element to be present) which are methods that we would constantly be calling in our code, so we put them in one place so we don't have to keep writing them every time we need them, and finally the page methods which are specific to the page you are testing.
@@ -80,7 +79,6 @@ I have structured the framework like this:
 * `src/main/test`: This is root directory for our test code. Keep your tests here.
 
 ## How it works
-
 Once we've written all the steps in the test file and Page Methods we need a Test Runner. We specify in this Runner which tests to run and the folder where the tests are. The runner is an xml file. In this project its called `testng.xml`
 
 ![alt text](Resources/TestRunner.png) 
@@ -113,13 +111,11 @@ The project is set to run 'headless' [(More Information here)](https://smartbear
 ![alt text](Resources/Headless.png)
 
 ## What Next
-
 I hope this has been helpful and you've successfully installed and ran the tests. You can now point this framework at any web site and automate tests by writing your own test files and page methods.
 
 If you get stuck there's unlimited resources to tap into on the web. A big part of becoming an automation test engineer is finding out how to do things yourself. I come across automation scenarios every day where I don't know what to do to overcome an issue, so I just type `Selenium Java ....my issue...` into a google search, there's usually hundreds of others who've had the same problem.
 
 #### Top tip
-
 If you are trying to fix something, keep your original code by commenting it out, and writing your new solution directly underneath, don't delete the original code. You might need to go back to it. The number of times I've deleted something then ended up having to write it all again .... save yourself some pain.
 
 Good luck and happy testing !!!!!!<br><br><br>
