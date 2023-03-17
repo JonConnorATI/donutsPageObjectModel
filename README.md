@@ -119,4 +119,4 @@ If you get stuck there's unlimited resources to tap into on the web. A big part 
 
 If you are trying to fix something, keep your original code by commenting it out, and writing your new solution directly underneath, don't delete the original code. You might need to go back to it. The number of times I've deleted something then ended up having to write it all again .... save yourself some pain.
 
-Good luck and happy testing !!!!!!<br><br><br>
+Good luck and happy testing !!!!!! :thumbsup: <br><br><br>
