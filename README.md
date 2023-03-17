@@ -115,7 +115,7 @@ I hope this has been helpful and you've successfully installed and ran the tests
 
 If you get stuck there's unlimited resources to tap into on the web. A big part of becoming an automation test engineer is finding out how to do things yourself. I come across automation scenarios every day where I don't know what to do to overcome an issue, so I just type `Selenium Java ....my issue...` into a google search, there's usually hundreds of others who've had the same problem.
 
-#### Top tip
+:bulb: Top tip
 If you are trying to fix something, keep your original code by commenting it out, and writing your new solution directly underneath, don't delete the original code. You might need to go back to it. The number of times I've deleted something then ended up having to write it all again .... save yourself some pain.
 
 Good luck and happy testing !!!!!!<br><br><br>
