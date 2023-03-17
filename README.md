@@ -1,5 +1,5 @@
 # donutsPageObjectModel
-This is a TestNG framework that I've created to show potential employers my knowledge and help anyone interested in UI Automation testing.
+This is a TestNG framework that I've created to help anyone interested in UI Automation testing.
 
 I chose this web site as it has some good features to practice on. Also, it is a bit temperamental when switching between pages so the tests have to be robust and able to handle behaviour that may or may not happen. All good fun.
 
