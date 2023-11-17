@@ -28,12 +28,13 @@
    			<version>4.1.0</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-devtools-v110 -->
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-devtools-v119 -->
 		<dependency>
-    		<groupId>org.seleniumhq.selenium</groupId>
-    		<artifactId>selenium-devtools-v110</artifactId>
-    		<version>4.8.1</version>
+		    	<groupId>org.seleniumhq.selenium</groupId>
+    			<artifactId>selenium-devtools-v119</artifactId>
+    			<version>4.15.0</version>
 		</dependency>
+
 
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
 		<dependency>
