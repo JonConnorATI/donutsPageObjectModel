@@ -112,7 +112,7 @@ public class BasePage {
 		driver.manage().window().maximize();
 		// driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
-		String homePage = "https://offbeatdonuts.com/";
+		String homePage = "https://offbeatdonuts.com/order-now/";
 		driver.get(homePage);
 
 	}
