@@ -22,11 +22,13 @@ public class OrderNowDonutsTests extends BasePage {
 
 			HomePage.openWebsite();
 			HomePage.acceptCookies();
-			HomePage.selectOrderNow();
+			Thread.sleep(2000);
+			//HomePage.selectOrderNow();
 
 			OrderNowPage.pickFromOffBeatDozen(donuts);
 			OrderNowPage.checkButtonQuantity("1", donuts);
 			OrderNowPage.selectNextSteps(1);
+			
 			OrderNowPage.checkItemsArePresent(donuts, "Box status: 12 / 12", "Remove box");
 			OrderNowPage.selectAddToCart();
 			OrderNowPage.checkPopUpItemsArePresent("Your box was added to cart", "VIEW CART", "Start another box");
@@ -61,8 +63,8 @@ public class OrderNowDonutsTests extends BasePage {
 
 	}
 	
-
 	@Test
+	
 	public void pickDonutsHungry() throws Exception {
 		/*
 		 * Pick an offbeat dozen, with 12 different varieties, add candles, add a
@@ -75,7 +77,8 @@ public class OrderNowDonutsTests extends BasePage {
 
 			HomePage.openWebsite();
 			HomePage.acceptCookies();
-			HomePage.selectOrderNow();
+			
+			//HomePage.selectOrderNow();
 
 			OrderNowPage.pickFromOffBeatDozen(donuts);
 			OrderNowPage.checkButtonQuantity("1", donuts);
@@ -130,25 +133,25 @@ public class OrderNowDonutsTests extends BasePage {
 
 			HomePage.openWebsite();
 			HomePage.acceptCookies();
-			HomePage.selectOrderNow();
+			//HomePage.selectOrderNow();
 
 			OrderNowPage.pickFromOffBeatDozen(donuts);
 			OrderNowPage.checkButtonQuantity("1", donuts);
 			OrderNowPage.selectNextSteps(1);
 			OrderNowPage.checkItemsArePresent(donuts, "Box status: 1 / 12", "Remove box");
 			OrderNowPage.autoPickDonuts();
-			OrderNowPage.addCandles();
+			OrderNowPage.addLuxuryCandles();
 			OrderNowPage.addGreetingCard("Happy Birthday", "All the best on your special day");
 			OrderNowPage.addBow("Pink");
-			OrderNowPage.addMessage("Just For You");
+			OrderNowPage.addLuxuryMessage("Just For You");
 			//OrderNowPage.addPhoto();
 			OrderNowPage.selectAddToCart();
 			OrderNowPage.checkPopUpItemsArePresent("Your box was added to cart", "VIEW CART", "Start another box");
 			OrderNowPage.selectViewCart();
 
-			ShoppingCartPage.CheckLuxuryCartText("my cart (5 items)", donuts, "Remove", "Candles", "Remove", "Card",
-					"Happy Birthday", "All the best on your special day", "Remove", "Bow", "\"Pink\"", "Remove",
-					"Piped name", "\"Just For You\"", "Remove");
+			ShoppingCartPage.CheckLuxuryCartText("my cart (6 items)", donuts, "Remove", "Candles", "Remove", "Card (included)",
+					"Happy Birthday", "All the best on your special day", "Bow (included)", "\"Pink\"",
+					"Piped name (included)", "\"Just For You\"");
 
 		}
 

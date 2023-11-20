@@ -70,7 +70,7 @@ public class OrderNowPage extends CommonMethods {
 	// Clicks the Add to cart button
 	public static void selectAddToCart() throws InterruptedException {
 		Thread.sleep(1000);
-		String button = "(//*[contains(text(),'Add to Cart')])[1]";
+		String button = "(//button[contains(text(),'Add to Cart')])[1]";
 		String css = ".extras_wrap";
 		WebElement Element = driver.findElement(By.cssSelector(css));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -137,11 +137,30 @@ public class OrderNowPage extends CommonMethods {
 		candleCheckBox.click();
 
 	}
+	
+	// add candles
+		public static void addLuxuryCandles() {
+			WebElement Element = driver.findElement(By.cssSelector("div[data-section='three']"));
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].scrollIntoView();", Element);
+
+			WebElement candleCheckBox = driver.findElement(By.xpath("(//h4[text() ='Add Candles'])[last()]"));
+			new WebDriverWait(driver, Duration.ofSeconds(60))
+					.until(ExpectedConditions.elementToBeClickable(candleCheckBox));
+			candleCheckBox.click();
+
+		}
 
 	// add a message
+	public static void addLuxuryMessage(String string) {
+		Click(By.xpath("(//h4[text() ='Add Message To A Donut:'])[last()]"));
+		enterText(By.xpath("(//div[@data-extra-type='pipped_name']//input[@type='text'])[last()]"), string);
+
+	}
+	
 	public static void addMessage(String string) {
 		Click(By.xpath("(//h4[text() ='Add Message To A Donut:'])[1]"));
-		enterText(By.cssSelector("div[class='selected'] input[placeholder='3 words maximum']"), string);
+		enterText(By.xpath("(//div[@data-extra-type='pipped_name']//input[@type='text'])[1]"), string);
 
 	}
 
@@ -160,18 +179,18 @@ public class OrderNowPage extends CommonMethods {
 	// Add a card, specify the type, add a greeting
 	public static void addGreetingCard(String string, String string2) {
 		// select add card
-		Click(By.xpath("(//h4[text() ='Add A Card:'])[1]"));
+		Click(By.xpath("(//h4[text() ='Add A Card:'])[last()]"));
 		// select type of card
-		Click(By.xpath("(//label[contains(text(),'" + string + "')])[1]"));
+		Click(By.xpath("(//label[contains(text(),'" + string + "')])[last()]"));
 		// add greeting
-		enterText(By.xpath("(//div[@class='customise']//textarea)[1]"), string2);
+		enterText(By.xpath("(//div[@class='customise']//textarea)[last()]"), string2);
 
 	}
 
 	// adds a bow of the selected colour
 	public static void addBow(String string) {
-		Click(By.xpath("(//h4[text() ='Add A Bow:'])[1]"));
-		Click(By.xpath("(//label[contains(text(),'" + string + "')])[1]"));
+		Click(By.xpath("(//h4[text() ='Add A Bow:'])[last()]"));
+		Click(By.xpath("(//label[contains(text(),'" + string + "')])[last()]"));
 
 	}
 
