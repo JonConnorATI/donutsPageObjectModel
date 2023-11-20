@@ -170,7 +170,7 @@ public class OrderNowPage extends CommonMethods {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView();", Element);
 
-		Click(By.linkText("Clear Selection"));
+		//Click(By.linkText("Clear Selection"));
 
 		Click(By.cssSelector("div[class='box_editor ui-droppable active'] a[class='box_autofill']"));
 
