@@ -22,7 +22,7 @@ public class OrderNowDonutsTests extends BasePage {
 
 			HomePage.openWebsite();
 			HomePage.acceptCookies();
-			Thread.sleep(2000);
+			//Thread.sleep(2000);
 			//HomePage.selectOrderNow();
 
 			OrderNowPage.pickFromOffBeatDozen(donuts);
