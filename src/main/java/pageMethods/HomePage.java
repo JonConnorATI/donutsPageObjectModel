@@ -17,7 +17,7 @@ public class HomePage extends CommonMethods {
 	//Accept cookies
 	public static void acceptCookies() {
 		
-		//WaitForElementToBePresent(By.id("cookiescript_accept"));
+		WaitForElementToBePresent(By.id("cookiescript_accept"));
 		
 		if (isElementPresent(By.xpath("//div[@data-testid='POPUP']")))
 			Click(By.xpath("//button[text()='NO THANKS']"));
