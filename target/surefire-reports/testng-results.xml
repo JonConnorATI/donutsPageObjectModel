@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-03-16T08:52:48 GMT" name="Suite" finished-at="2023-03-16T08:55:01 GMT" duration-ms="133231">
+    <groups>
+    </groups>
+    <test started-at="2023-03-16T08:52:48 GMT" name="Test" finished-at="2023-03-16T08:55:01 GMT" duration-ms="133231">
+      <class name="tests.OrderNowDonutsTests">
+        <test-method signature="pickDonutsEconomy()[pri:0, instance:tests.OrderNowDonutsTests@3911c2a7]" started-at="2023-03-16T08:52:48 GMT" name="pickDonutsEconomy" finished-at="2023-03-16T08:53:33 GMT" duration-ms="45401" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pickDonutsEconomy -->
+        <test-method signature="pickDonutsHungry()[pri:0, instance:tests.OrderNowDonutsTests@3911c2a7]" started-at="2023-03-16T08:53:33 GMT" name="pickDonutsHungry" finished-at="2023-03-16T08:54:18 GMT" duration-ms="44739" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pickDonutsHungry -->
+        <test-method signature="pickDonutsLuxury()[pri:0, instance:tests.OrderNowDonutsTests@3911c2a7]" started-at="2023-03-16T08:54:18 GMT" name="pickDonutsLuxury" finished-at="2023-03-16T08:55:01 GMT" duration-ms="43022" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pickDonutsLuxury -->
+      </class> <!-- tests.OrderNowDonutsTests -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
