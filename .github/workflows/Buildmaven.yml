@@ -15,10 +15,13 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
           cache: maven
+      - name: Create directories
+        run: mkdir -p target/site    
       - name: Build with Maven
         run:  mvn clean install package --file pom.xml
       - name: Generate Surefire Reports
         run: mvn surefire-report:report-only
+        
         
    
 
