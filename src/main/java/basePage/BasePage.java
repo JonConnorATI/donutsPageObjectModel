@@ -58,7 +58,7 @@ public class BasePage {
 
 					ChromeOptions ops = new ChromeOptions();
 					ops.addArguments("--disable-notifications"); 
-					ops.addArguments("--headless");
+					//ops.addArguments("--headless");
 					ops.addArguments("--remote-allow-origins=*");
 					ops.addArguments("--no-sandbox");
 					ops.addArguments("--disable-dev-shm-usage");
