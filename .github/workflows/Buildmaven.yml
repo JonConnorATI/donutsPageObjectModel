@@ -17,6 +17,11 @@ jobs:
           cache: maven
       - name: Build with Maven
         run:  mvn clean install package --file pom.xml
+      - name: Upload Surefire Reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: surefire-reports
+          path: target/surefire-reports/
      
         
         
